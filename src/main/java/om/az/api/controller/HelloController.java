@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloController {
     @RequestMapping("/hello")
     public String getProduct() {
+        System.out.println("publish fist app in az");
+
         return "Hello";
     }
 }
