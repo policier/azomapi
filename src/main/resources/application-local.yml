@@ -1,0 +1,81 @@
+#CTX
+server:
+  context-path:
+  error:
+    whitelabel:
+      enabled: false
+#security
+security:
+   ignored:
+   - none
+  basic:
+    enabled: false
+management:
+  security:
+    enabled: false
+#DB AND JPA
+spring:
+  security:
+    enable: false
+  datasource:
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+    tomcat:
+      test-on-borrow: true
+      validation-query: SELECT 1
+  h2:
+    console:
+      enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        default_schema: proc_general
+    generate-ddl: false
+  ldap:
+    embedded:
+      credential:
+        username:
+
+#ACTUATOR
+endpoints:
+  auditevents:
+    enabled: false
+  actuator:
+    enabled: false
+  beans:
+    enabled: false
+  configprops:
+    enabled: false
+  docs:
+    enabled: false
+  env:
+    enabled: false
+  flyway:
+    enabled: false
+  health:
+    enabled: true
+  heapdump:
+    enabled: false
+  info:
+    enabled: false
+  jolokia:
+    enabled: false
+  logfile:
+    enabled: false
+  loggers:
+    enabled: false
+  liquibase:
+    enabled: false
+  metrics:
+    enabled: false
+  mappings:
+    enabled: true
+  shutdown:
+    enabled: false
+  trace:
+    enabled: false
+
